@@ -1,14 +1,132 @@
 
+<!doctype html>
 <html lang="sr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Црквена Општина Бојник</title>
   <meta name="description" content="Званични сајт Црквене Општине Бојник — Српска Православна Црква.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #c00;
+      --blue: #0a3d91;
+      --white: #ffffff;
+      --bg: #f7f7f8;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --radius: 12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.5; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 28px; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+    .brand { display: flex; gap: 12px; align-items: center; }
+    .logo { width: 64px; height: 64px; border-radius: 12px; background: linear-gradient(135deg, var(--blue) 0%, var(--white) 50%, var(--accent) 100%);
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+    nav a { margin-left: 18px; color: var(--muted); text-decoration: none; font-weight: 600; }
+    nav a:hover { color: var(--accent); }
+    h1, h2, h3 { color: var(--blue); }
+    .hero { display: grid; grid-template-columns: 1fr 420px; gap: 28px; align-items: center; margin-top: 28px; }
+    .cta { display: inline-block; background: var(--accent); color: white; padding: 12px 18px; border-radius: 10px; text-decoration: none; font-weight: 600; }
+    .card { background: white; border-radius: var(--radius); padding: 18px; box-shadow: 0 8px 30px rgba(18,18,18,0.06); }
+    footer { margin-top: 38px; padding: 18px 0; color: var(--muted); font-size: 14px; text-align: center; border-top: 3px solid var(--blue); }
+    .slideshow-container { position: relative; max-width: 100%; margin-top: 18px; }
+    .slide { display: none; width: 100%; border-radius: 10px; max-height: 350px; object-fit: cover; }
+    .prev, .next { cursor: pointer; position: absolute; top: 50%; padding: 12px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; background-color: rgba(0,0,0,0.5); border-radius: 3px; }
+    .next { right: 0; }
+    .news-card { background: white; border-radius: 10px; padding: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.05); margin-bottom: 12px; }
+    .news-card img { width: 100%; border-radius: 8px; object-fit: cover; max-height: 180px; margin-bottom: 8px; }
+  </style>
 </head>
 <body>
-  <h1>Добродошли на званични сајт Црквене Општине Бојник</h1>
-  <p>Ово је пример основне странице у ћирилици. Након што поставимо све фајлове, сајт ће бити активан преко GitHub Pages.</p>
+<div class="container">
+  <header>
+    <div class="brand">
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Serbian_Orthodox_Church_coat_of_arms.png" alt="Грб СПЦ" style="width:48px;height:48px;border-radius:8px;object-fit:contain">
+      </div>
+      <div>
+        <div style="font-weight:800;font-size:20px;">Црквена Општина Бојник</div>
+        <div style="font-size:13px;color:#6b7280;">Српска Православна Црква</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">О нама</a>
+      <a href="#news">Новости</a>
+      <a href="#gallery">Галерија</a>
+      <a href="#contact">Контакт</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Добродошли на званични сајт</h1>
+      <p>Информације о богослужењима, животу парохије и обавештењима наше заједнице.</p>
+      <a class="cta" href="#contact">Контактирајте нас</a>
+    </div>
+    <div class="card" style="text-align:center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Serbian_Orthodox_Church_coat_of_arms.png" alt="Грб СПЦ" style="width:100%;border-radius:8px;max-height:240px;object-fit:contain;margin-bottom:12px">
+      <div style="font-weight:700;color:#0a3d91;">Српска Православна Црква</div>
+      <div style="color:#6b7280;font-size:13px;">Епархија нишка</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>О нама</h2>
+    <p>Црквена општина Бојник делује у оквиру Српске православне цркве и окупља вернике нашег краја у вери, молитви и заједништву. Наш храм је духовни центар живота верника у Бојнику и околини.</p>
+  </section>
+
+  <section id="news">
+    <h2>Новости</h2>
+    <div class="news-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Serbian_Orthodox_service.jpg/320px-Serbian_Orthodox_service.jpg" alt="Литургија">
+      <p><strong>15. октобар 2025.</strong> — Организована свечана литургија поводом празника Светог Николе.</p>
+    </div>
+    <div class="news-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Serbian_children_church.jpg/320px-Serbian_children_church.jpg" alt="Веронаука">
+      <p><strong>1. октобар 2025.</strong> — Почела веронаука за децу и омладину у просторијама цркве.</p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Галерија</h2>
+    <div class="slideshow-container">
+      <img class="slide" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Serbian_Orthodox_Church_in_Bojnik.jpg" alt="Храм Светог Николе">
+      <img class="slide" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Serbian_Orthodox_iconostasis.jpg" alt="Иконостас">
+      <img class="slide" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Serbian_Orthodox_bishop.jpg" alt="Епископ">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Контакт</h2>
+    <p>Адреса: Храм Светог Николе, Бојник</p>
+    <p>Телефон: 063 713 0236</p>
+    <p>Е-пошта: <a href="mailto:crkva.bojnik@gmail.com">crkva.bojnik@gmail.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 Црквена Општина Бојник — Српска Православна Црква
+  </footer>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+function plusSlides(n){ showSlides(slideIndex += n); }
+function showSlides(n){
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  if(n === undefined){ slideIndex++; }
+  if(n > slides.length){ slideIndex = 1; }
+  if(n < 1){ slideIndex = slides.length; }
+  for(i=0;i<slides.length;i++){ slides[i].style.display = "none"; }
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 5000);
+}
+</script>
 </body>
 </html>
-al 
